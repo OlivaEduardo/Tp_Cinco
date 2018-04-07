@@ -1,0 +1,17 @@
+Functions tests answers are here.
+
+(1) c) It is implemenmtation dependant. If left just as written in the example, a compilation error is issued because the type conversion for the parameter is ambiguous.
+But if we specify the variable type to one of the parameters or take the signed specifier from the function declaration and definition, there won't be a compilation 
+error and the new function will be called.
+
+(2) d) There is a link error, none of the functions are included in the main file (No header file is included). If we include both files / functions, the one with the Int parameter will be called.
+
+(3) d) There is a link error, the function has not default parameters declared in the header.
+
+(4) c)
+
+(5) b)
+
+(6) d) There is a compilation error because the overload methods cannot have only different return types.
+
+(7) a)
