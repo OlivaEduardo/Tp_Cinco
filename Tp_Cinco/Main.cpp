@@ -1,5 +1,6 @@
 //Functions practice
 #include <iostream>
+typedef float(*fncPtr)(char var);
 
 //(8) Array sort function.
 void sort(int* arrayPtr, unsigned int size) {
@@ -42,7 +43,8 @@ void print(int* arrayPtr, unsigned int size) {
 
 //(10) Function declaration and definition
 int doubleToInt(double value) {
-	return value;
+	int aux = (int)value;
+	return aux;
 }
 
 //(11) Char to Float function
@@ -51,9 +53,9 @@ float charToFloat(char var) {
 }
 
 //(11) Int to Function Pointer
-void* intToFunctPtr(int parameter) {
-	float(*funCharTF)(char) = charToFloat;
-	return funCharTF;
+fncPtr intToFunctPtr(int parameter) {
+	fncPtr CTF = charToFloat;
+	return CTF;
 }
 
 int main() {
@@ -74,9 +76,9 @@ int main() {
 	std::cout << functPtr(47.78f) << std::endl;
 
 	//(11)
-	void*(*intToFnc)(int) = intToFunctPtr;
 	int example = 65;
-	std::cout << intToFnc(example) << std::endl;
+	fncPtr CTF = intToFunctPtr(example);
+	std::cout << CTF((char)example) << std::endl;
 
 	int end = 0;
 	std::cin >> end;
